@@ -1,0 +1,22 @@
+body{
+font-family: 'Montserrat', sans-serif;s
+  -webkit-filter: grayscale(10%);
+}
+a {
+  font-family: 'Montserrat', sans-serif;
+  color:white;
+  font-size: 1.3em;
+}
+.well{
+  -webkit-filter: grayscale(5%);
+}
+#backimg{
+   position: absolute;
+    left: 0px;
+    top: 0px;
+    //background-size: cover;
+  opacity: 0.6;
+ 
+   
+   
+}

@@ -1,0 +1,85 @@
+<html>
+ <head>
+ 	    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+      <link rel="stylesheet" href="./css/w3.css" >
+      <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+	  <script language="javascript" src="./js/index.js"></script>
+
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" href="./css/index.css" >
+   </head>
+   <body ng-app="firstApplication" ng-cloak class="container-fluid">
+   <img src="./images/bg3.jpg" id="backimg" width="100%" height="100%">
+   		<div class="row">
+   			<div class="col-md-3 w3-padding-xxlarge">
+   				<img src="./images/logo.png" width="100px" height="100px">
+   			</div>
+   			<div class="col-md-8 w3-padding-xxlarge w3-padding-64">
+   				<ul class="w3-navbar">
+				  <li><a href="#" >EXHIBITIONS</a></li>
+				  <li><a href="#" >ADVERTISE</a></li>
+				  <li><a href="#" >CONTACT US</a></li>
+				  <li><a href="#" >ABOUT US</a></li>
+				</ul>
+   			</div>
+   			
+   		</div>
+   		<div class="w3-row-padding" style="margin-top:50px;">
+   			<div class="col-md-2">
+   				
+   			</div>
+   			<div class="col-md-8 w3-center w3-xlarge" style="color: #e74c3c  ">
+   				<b>We Exhibhits you in a way no one else does and will ever do.
+   				We Exhibhits you in a way no one else does and will ever do.</b>	
+   			</div>
+   			
+   		</div>
+   		<div class="w3-row-padding" style="margin-top:50px;color:black;-webkit-filter:grayscale()">
+   			<div class="col-md-3">
+   				
+   			</div>
+   			<div class="col-md-6 well well-lg">
+   				<div class="col-md-9">
+   					<div ng-controller="autoCompleteController as ctrl" ng-cloak>
+
+            		<form ng-submit="$event.preventDefault()">
+              
+              		 <md-autocomplete
+                  	ng-disabled="ctrl.isDisabled"
+                  	md-no-cache="ctrl.noCache"
+                  	md-selected-item="ctrl.selectedItem"
+                  	md-search-text-change="ctrl.searchTextChange(ctrl.searchText)"
+                  	md-search-text="ctrl.searchText"
+                  	md-selected-item-change="ctrl.selectedItemChange(item)"
+                  	md-items="item in ctrl.querySearch(ctrl.searchText)"
+                  	md-item-text="item.display"
+                 	md-min-length="0"
+                  	placeholder="Select Your City">
+                  	<md-item-template>
+                    	 <span md-highlight-text="ctrl.searchText" md-highlight-flags="^i">{{item.display}}</span>
+                  	</md-item-template>
+                  	<md-not-found>
+                    	 No states matching "{{ctrl.searchText}}" were found.
+                     	<a ng-click="ctrl.newState(ctrl.searchText)">Create a new one!</a>
+                  	</md-not-found>
+               	</md-autocomplete>
+            	</form>
+      			</div>
+   			</div>
+   			
+   			<div class="col-md-3">
+   				<md-button class="md-raised md-primary btn">Show Expo's</md-button>
+   			</div>
+   		</div>
+   		</div>
+   </body>
+
+</html>
